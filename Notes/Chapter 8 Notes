@@ -1,0 +1,88 @@
+#Functions
+Compartmentalize your code so that it's easier
+to read and reuse
+
+    def function_name(parameter, *args, **kwargs):
+        *code*
+        
+Call the function with *function_name(argument)*
+
+Use docstrings to give explanations for functions,
+these are like comments but python parses them
+    
+    """explanation"""
+
+Python processes arguments positionally in the
+order that the parameters were defined
+
+    function_name(argument_1, argument_2)
+    
+Keyword arguments are ones where you explicitly
+assign a parameter for it to be associated with
+
+    function_name(parameter='value')
+    
+They can be in any order
+
+Assign a default value to the parameter in
+case there is no input
+
+    def function_name(parameter_1, parameter_2="2"):
+    
+Put them at the end so if less values are entered,
+the default ones are used
+
+Use the keyword *return* to return something
+when the function is called
+
+Make parameters optional with an empty 
+default value and a conditional statement
+(evaluates to false if empty string)
+
+Pass a complete slice of a list to prevent
+a function from modifying the list contents
+
+Use *\*args* to allow an arbitrary number of
+arguments to pass through the function. Python
+then stores them into a tuple. Put these
+arbitrary arguments after everything that is
+defined
+
+    def function_maker(parameter, *args):
+    
+Use *\*\*kwargs* to allow an arbitrary number
+of keyword arguments, which is stored in a
+dictionary
+
+    def function_maker(parameter, **kwargs):
+    
+    function_maker('hello', name='bob'):
+    
+##Modules
+A module is a file ending in .py
+
+Functions can be placed in these separate files
+for better organization
+
+    import module
+    import module as m
+    from module import function, function2
+    from module import function as f
+    from module import *
+    
+if importing only module, then functions that
+are used must contain the module name
+    
+    module.function()
+    m.function()
+
+If importing a function directly, then the
+module name can be omitted
+
+    function2()
+    f()
+
+The \* means that everything is imported, which
+may impact performance if it is a large file
+
+    

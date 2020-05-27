@@ -1,0 +1,60 @@
+# Variables and Simple Data Types
+
+## Variable creation
+
+Variables names can only have letters, numbers,
+and underscores.
+
+They cannot start with a number, nor have spaces
+
+Multiple assignment is possible
+
+    x, y, z = 1, 2, 3
+
+## Strings
+
+Anything encased by "" or '' becomes a string.
+Both of the notations can be used to add
+apostrophes/quotes
+
+.title() .upper() .lower() methods can be
+used to manipulate the output of a string
+
+f-strings (format) can be used to display 
+variables in strings. End attribute can be
+set to anything, default is \n
+
+    print(f"{variable_name}", end="")
+
+Add whitespace (non-printing character) with:
+
+    \t - tab
+
+    \n - newline
+
+Strip excess space with
+
+    .strip() .rstrip() .lstrip()
+
+## Numbers
+
+    + - / * %
+
+    ** represents an exponent
+
+Any division results in a float answer, and 
+operations with floats result in float answers
+
+Use int() and str() methods to convert
+
+Python ignores _ in numbers, i.e. 14_000_00
+
+### Constants
+Python has no constants, but a good convention
+is to make the variable name all caps to indicate
+that it should not be changed
+
+Comment out code with # to the left
+
+\# Hello World
+

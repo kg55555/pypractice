@@ -1,0 +1,24 @@
+#IF Statements
+Conditional tests that only pass if they
+evaluate to true
+
+    if *conditional test*:
+        *Run some code*
+    elif *conditional test*:
+        *Run some code*
+    else:
+        *Run some code*
+        
+They don't need to have an else statement at the end
+
+Use the keywords *and* *or* to include
+multiple conditions
+
+Use *not* to indicate the opposite
+
+Can be used to check if a value is in a list
+
+        if 'value' not in list_maker:
+        
+A non-empty list/dictionary/etc returns true,
+else it's false

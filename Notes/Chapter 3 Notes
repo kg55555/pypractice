@@ -1,0 +1,45 @@
+#Introducing Lists
+
+Lists are a collection of objects
+
+Can be created with the syntax: list_maker = ['bob', 3]
+
+The index of a list starts at 0, so list_maker[0]
+corresponds to 'bob'
+
+Index can be negative to count from end, i.e.
+-1 is last value, -2 is second from last, etc
+
+Reassign values in a list with variable assignment
+
+list_maker[0] = 'steve'
+
+## List Methods
+
+.append() - add a value to the end of the list
+
+.insert(index, value) - insert a value into a
+specific index 
+
+del list_maker[index] - delete an item from a
+specific index
+
+.pop(index) - take the last item and return it, 
+or specify an index to pop
+
+.remove(value) - remove an item based on it's
+value. Only removes the first occurrence
+
+.sort(reverse=True) - sort a list permanently in alphabetical
+order, or reversed
+
+sorted(list, reverse=True) - returns a 
+temporarily sorted list, can be reversed
+
+.reverse() - reverse the order of the list
+
+len(list) - returns the length of the list
+
+
+
+

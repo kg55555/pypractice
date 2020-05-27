@@ -1,0 +1,67 @@
+#Working with Lists
+## Looping Through Lists
+
+    for magician in magicians:
+    
+        print(magician)
+    
+Indent following lines to put it within the loop
+
+##List Methods
+
+range(start, <end, skip) - cycles through numbers
+from start to end-1 inclusive. Defaults to 0
+and can skip numbers with the third entry
+
+min(list) - finds the lowest value
+
+max(list) - finds the maximum value
+
+sum(list) - sums the list
+
+    squares = [value**2 for value in range(1, 11)]
+    print(squares) 
+    
+List comprehensions can be used to generate a
+predefined list
+
+##Slice
+
+Take only a range of values from a list
+
+    list_maker[start:end, skip]
+
+Includes values from *start* to *end-1*, and
+can accept a value to skip within that range
+
+    [:] - everything
+    [1:] - index to end
+    [:3] - start to index
+    [-3:] - index to end
+    
+Shallow copy a list by directly assigning to
+another variable. Changes in one will be
+reflected in the other as they point to the 
+same memory location
+
+    list_maker = [.....]
+    list_new = list_maker
+
+Deep copy a list with a slice encompassing
+everything
+    
+    list_maker = [.....]
+    list_new = list_maker[:]
+    
+##Tuples
+Unchangeable lists
+
+    tuple_maker = (value,)
+
+Created with (), and must have a comma even
+with one value
+
+Tuples cannot be modified, but the variable
+can be overwritten
+ 
+ 

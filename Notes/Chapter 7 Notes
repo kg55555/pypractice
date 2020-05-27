@@ -1,0 +1,23 @@
+#User Input and While Loops
+
+The input function pauses and program and prompts
+the user to enter a response.
+
+Output will be a string, so convert it with 
+*int()*
+
+    variable = input("message")
+    
+If your message is long, use a variable to 
+concatenate strings
+
+##While Loops
+
+    while *condition is true*:
+        *code*
+        
+Use the keyword *break* to immediately exit a
+while loop at any point
+
+Use the keyword *continue* to restart the loop
+at the top from any point

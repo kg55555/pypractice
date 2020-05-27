@@ -1,0 +1,55 @@
+#Dictionaries
+
+    dictionary_maker = {'key':'value'}
+    
+Dictionaries store key-value pairs, and values 
+can be accessed by inputting the key
+
+    dictionary_maker['key']
+    
+Add new pairs by assigning them
+    
+    dictionary_maker['new_key'] = value
+    
+Delete by using the *del* keyword
+
+    del dictionary_maker['new_key']
+  
+Use the .get()  method to return a default value
+if the key does not exist. Default of default
+is None
+    
+    dictionary_maker.get(key, default)
+    
+##Looping Through a Dictionary
+
+Returns both key and value
+
+    for k, v in dictionary_maker.items():
+    
+Return key only
+
+    for k in dictionary_maker:
+    for k in dictionary_maker.keys():
+    
+Return values only
+
+    for v in dictionary_maker.values():
+    
+Can wrap a *sorted()* method around the dictionary
+to process it in a specific order
+
+Wrap a *set()* around a list with duplicates
+to create a set with only the unique entries
+
+##Nesting
+
+Can nest a list inside a dictionary and vice versa
+Also can nest a list in list and a dictionary
+inside another dictionary.
+
+Take care to not next too deeply, as it means that
+there is probably an easier way to do it
+
+
+    
