@@ -1,0 +1,3 @@
+I have learned that the smallest scope in python is a function
+I have also learned that class attributes can be returned with the __dict__() method
+Lastly, you can used a **kwargs and a loop to process many user arguments

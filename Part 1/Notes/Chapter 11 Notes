@@ -1,0 +1,68 @@
+#Testing Your Code
+
+A *unit test* verifies that one specific function
+of your code is correct
+
+A *test case* is a collection of unit tests that
+prove a function behaves the way it should, in
+the full range of situations
+
+A test case with *full coverage* means that
+it includes tests for all the possible ways that
+the function can be used
+
+    import unittest
+    from name_function import get_formatted_name
+    
+    class NamesTestCase(unittest.TestCase):
+        """Tests for 'name_function.py'."""
+        
+    
+        def test_first_last_name(self):
+            """Do names like 'Janis Joplin' work?"""
+            formatted_name = get_formatted_name('janis', 'joplin')
+            self.assertEqual(formatted_name, 'Janis Joplin')
+    
+    
+    if __name__ == '__main__':
+        unittest.main()
+        
+        
+Must import unittest
+
+Create a class with a descriptive name, that
+inherits from *unittest.TestCase*
+
+Start unit test methods with the *test* keyword
+
+    if __name__ == ' __main__':
+        unittest.main()
+
+If the current program being run is the unittest
+file, then the __name__ attribute would be
+__main__, and the unittest would run
+
+Otherwise, if another function imports this file,
+then it wouldn't run
+
+    assertEqual(a, b) Verify that a == b
+    assertNotEqual(a, b) Verify that a != b
+    assertTrue(x) Verify that x is True
+    assertFalse(x) Verify that x is False
+    assertIn(item, list) Verify that item is in list
+    assertNotIn(item, list) Verify that item is not in list
+    
+Use self.method() to test inputs
+
+To test classes, you can create the instances
+inside the test methods, but an easier way is
+to use the setUp() method
+
+    def setUp(self):
+        question = "What language did you first learn to speak?"
+        self.my_survey = AnonymousSurvey(question)
+        self.responses = ['English', 'Spanish', 'Mandarin']
+        
+This creates an instance of the class and assigns it
+to an attribute of *self*, which allows it to be
+accessed by any methods in the class

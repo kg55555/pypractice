@@ -16,6 +16,9 @@ concatenate strings
     while *condition is true*:
         *code*
         
+        
+    break continue
+   
 Use the keyword *break* to immediately exit a
 while loop at any point
 

@@ -1,0 +1,100 @@
+#Files and Exceptions
+
+    with open(file_name, 'r') as fn:
+        value = fn.read()
+
+With this block, the open() method opens the file,
+the read() method scans the entire file and assigns
+it to the 'value' variable. The file is then
+closed after the indented code due to the 'with'
+keyword.
+
+Using a close() method can close the file
+manually, though improperly closed files can
+lead to corruption or unintended behaviour
+
+The read() methods add a whitespace character
+to the right of the pulled text, so using
+rstrip() on the output will restore it to
+the original format
+
+Can add file paths to the 'file_name' argument
+
+Use / to indicate folders, otherwise \\ to
+escape the backslash if copying windows formats
+
+    for line in fn:
+        print(line)
+
+Can loop through each line in the file via
+a for loop. Remember to strip the newline
+character at the end
+
+    fn.readlines()
+    
+This method pulls each line and stores it in
+a list
+
+##Writing to a File
+
+    with open(file_name, 'w') as fn:
+        fn.write(value)
+        
+By using the write() method and have the 'w'
+argument in the open() method, we can create
+a file if there isn't one and write the contents
+into the file
+
+Only strings can be stored and extracted, so
+perform the necessary conversions first.
+
+Add a newline character to write each value
+on a separate line
+
+    r - read-only mode
+    w - write mode, overwrites the file
+    a - append mode, adds to the end
+
+##Exceptions
+
+    try:
+        code
+    except Error:
+        code
+    else:
+        code
+        
+Put the code in question into the try block,
+and put the possible error as the Error. The
+else block runs only if no exceptions are thrown,
+and can be omitted
+
+    pass
+    
+The pass statement is like a placeholder; it
+does nothing and could be a reminder
+
+##Storing JSON
+
+    import json
+
+    numbers = [2, 3, 5, 7, 11, 13]
+    filename = 'numbers.json'
+    with open(filename, 'w') as f:
+        json.dump(numbers, f)
+        
+Make sure to include .json in the filename
+
+    import json
+    
+    filename = 'numbers.json'
+    with open(filename) as f:
+        numbers = json.load(f)
+    print(numbers)
+    
+    
+Breaking up code into smaller chunks is called
+refactoring
+
+
+

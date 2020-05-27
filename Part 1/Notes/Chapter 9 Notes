@@ -1,0 +1,58 @@
+#Classes
+Making an object from a class is called
+*instantiation*, and we work with *instances*
+of a class
+
+    class Name:
+        
+        def __init(self, parameter, *args, **kwargs):
+            self.attribute_name = parameter
+            for a in args:
+                setattr(self, a, a)
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+                
+A function that's a part of a class is called
+a *method*. Every class requires the __init__()
+method. These methods automatically pass the
+parameter *self*, so no value is needed for that one.
+
+Assign values to attributes of these instances,
+which can be accessed by its methods or name
+
+You can set a default value for an attribute
+
+    def __init__(self, parameter = 'john'):
+        self.parameter = parameter
+        
+##Inheritance
+
+    class Surname(Name):
+    
+        def __init__(self, parameter):
+            super().__init__(self, parameter)
+            
+A child class can be created to inherit the
+attributes of the parent superclass.
+
+Add parentheses after the class with the 
+parent class enclosed. Also use the super()
+function to call something from the parent
+class
+
+You can override methods from the parent class
+by making one with the same name
+
+Instances can also be attributes as well, to
+further compartmentalize the program
+
+    self.battery = Battery()
+    print(self.battery.battery)
+    
+Importing works the same as with modules, and
+any dependencies must be imported by the modules
+themselves as well
+
+
+ 
+ 
