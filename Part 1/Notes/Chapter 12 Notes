@@ -1,0 +1,127 @@
+#A Ship that Fires Bullets
+
+##Basic Program
+Install the modules that you need for
+your program, in this case "pygame"
+
+    import sys
+    import pygame
+
+
+    class AlienInvasion:
+    """Overall class to manage game assets and behavior."""
+
+        def __init__(self):
+            """Initialize the game, and create game resources."""
+            pygame.init()
+            self.screen = pygame.display.set_mode((1200, 800))
+            pygame.display.set_caption("Alien Invasion")
+
+        def run_game(self):
+            """Start the main loop for the game."""
+            while True:
+                # Watch for keyboard and mouse events.
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        sys.exit()
+                # Make the most recently drawn screen visible.
+                pygame.display.flip()
+    
+
+    if __name__ == '__main__':
+        # Make a game instance, and run the game.
+        ai = AlienInvasion()
+        ai.run_game()
+
+Initialize the game background settings
+with:
+ 
+    pygame.init()
+
+Set the background size with:
+
+    self.screen = pygame.display.set_mode((1200,800))
+    
+A tuple that defines the width and height
+as 1200 and 800 respectively. Can
+be accessed by other methods by being
+assigned to 'self.screen'
+
+The object that was assigned is called
+a 'surface'
+
+A surface in pygame is a part of the
+screen where a game element can be
+displayed.
+
+Each element (alien or ship) is its
+own surface
+
+    for event in pygame.event.get():
+    
+The program continuously listens
+to 'events', which is an action the
+user performs such as a click or 
+key press.
+
+The function returns events that have
+occurred since the last time the function
+was called
+
+    pygame.display.flip()
+    
+Calls for the most recently drawn
+screen to be visible. Hides old ones
+and updates new ones
+    
+##Setting Background
+
+Pygame defaults to a black screen
+
+    # Set the background color.
+    self.bg_color = (230, 230, 230)
+
+    # Redraw the screen during each pass through the loop.
+    self.screen.fill(self.bg_color)
+
+Colours are created from rgb values,
+which range from 0 to 255
+
+##Create a Settings Class
+
+Make a settings modules to store
+every setting, so that it's all
+consolidated in one place instead of
+being scattered throughout the code
+
+##Create the Ship Class
+
+Pygame lets you treat in-game objects
+as rectangles for collision purposes
+
+They are thus known as a 'rect' object
+
+The x and y coords of the top, bottom,
+left, and right edges, as well as
+the center can be used to place the
+rect object
+
+    center centerx centery
+    
+    midbottom midtop midleft midright
+    
+The origin (0,0) is at the top left
+corner, and increase as you go down
+or right
+
+##Refactoring
+
+A method that starts with an underscore
+is a helper method, which isn't meant
+to be called by an instance, but does
+work in the class
+
+
+
+
+
